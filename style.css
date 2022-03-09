@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --sidebar-colour: #1992d4;
+  --main-bg-colour: #e2e8f0;
+  --card-border-colour: #f0b429;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 300px 1fr;
+  height: 100vh;
+}
+
+/* Sidebar */
+aside {
+  padding: 0.5rem;
+  display: grid;
+  gap: 60px;
+  grid-template-rows: 100px min-content min-content;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  background-color: var(--sidebar-colour);
+  color: #fff;
+}
+
+.logo {
+  align-items: center;
+}
+
+.logo > h1 {
+  display: inline;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.icons ul {
+  display: grid;
+  list-style-type: none;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.icons ul > li, .logo {
+  display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+img[src$=".svg"] {
+  filter: invert(1);
+  justify-self: center;
+}
+
+/* Header */
+
+header {
+  grid-row: 1 / 2;
+  grid-column: 2 / -1;
+  background-color: pink;
+}
+
+/* Main */
+main {
+  background-color: var(--main-bg-colour);
+}
